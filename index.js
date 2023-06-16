@@ -10,7 +10,6 @@ io.on("connection", (socket) => {
   console.log("a user connected");
 
   socket.on("text-update", (text) => {
-    console.log(text);
     socket.broadcast.emit("text-update", text);
   });
 
